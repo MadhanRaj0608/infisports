@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFI SPORTS</title>
+
+    <!-- Swiper CSS for Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        /* Header - Changed to Purple */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #6a0dad;  /* Purple */
+            color: white;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Menu Button */
+        .menu {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Navigation Menu */
+        #nav-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        #nav-menu ul {
+            list-style: none;
+        }
+
+        #nav-menu li {
+            padding: 10px;
+        }
+
+        #nav-menu a {
+            text-decoration: none;
+            color: #222;
+            font-weight: bold;
+        }
+
+        /* Show menu when active */
+        #nav-menu.active {
+            display: block;
+        }
+
+        /* Main Content */
+        .coming-soon {
+            margin-top: 30px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #6a0dad; /* Purple */
+        }
+
+        /* Added space between "COMING SOON" and subtext */
+        .subtext {
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px; 
+            margin-bottom: 30px; /* Space before images */
+        }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 80%;
+            max-width: 600px;
+            height: 350px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        /* Hide Swiper Navigation and Pagination */
+        .swiper-button-next,
+        .swiper-button-prev,
+        .swiper-pagination {
+            display: none !important;
+        }
+
+        /* Info Section */
+        .info {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hidden Sections */
+        .hidden-section {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hidden-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">INFI SPORTS</div>
+        <div class="menu" id="menu-btn">&#9776;</div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="about.html" id="about-link">About Us</a></li>
+            <li><a href="#" id="contact-link">Contact Us</a></li>
+            <li><a href="#" id="more-btn">More</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1 class="coming-soon">COMING SOON!!!</h1>
+        <p class="subtext">Bringing all kinds of sports enthusiasts together for exciting domestic tournaments!</p>
+
+        <!-- Image Carousel -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="7.png" alt="Team Image 1"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Team Image 2"></div>
+                <div class="swiper-slide"><img src="2.png" alt="Team Image 3"></div>
+                <div class="swiper-slide"><img src="3.png" alt="Team Image 4"></div>
+                <div class="swiper-slide"><img src="4.png" alt="Team Image 5"></div>
+                <div class="swiper-slide"><img src="5.png" alt="Team Image 6"></div>
+                <div class="swiper-slide"><img src="6.png" alt="Team Image 7"></div>
+            </div>
+        </div>
+
+        <section class="info">
+            <h2>HELLO CHENNAI - STAY TUNED !</h2>
+            <p>Our First Tournament is a Fundraiser.<br>
+            After covering operational costs, all the remaining money will be donated for a good cause.<br>
+            Participate and support our cause in developing the IT infrastructure of Tamil Nadu’s government schools while enjoying a competitive sports experience.</p>
+        </section>
+
+        <!-- Sliding About Us Section -->
+        <section id="about-section" class="hidden-section">
+            <h2>About Us</h2>
+            <p>We are dedicated to bringing together sports enthusiasts from all backgrounds, organizing thrilling tournaments, and fostering a strong sporting community.</p>
+        </section>
+
+        <!-- Sliding Contact Section -->
+        <section id="contact-section" class="hidden-section">
+            <h2>Contact Us</h2>
+            <p>For inquiries, reach us at: <br>Email: info@infisports.com <br>Phone: +91 9876543210</p>
+        </section>
+
+        <!-- Sliding More Section -->
+        <section id="more-content" class="hidden-section">
+            <h2>More Information</h2>
+            <p>Stay tuned for exciting events, tournaments, and community engagements!</p>
+        </section>
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Initialize Swiper Carousel
+        var swiper = new Swiper('.swiper-container', {
+            loop: true, 
+            slidesPerView: 1,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: false,
+            pagination: false,
+        });
+
+        // Navigation Menu Toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuBtn = document.getElementById("menu-btn");
+            const navMenu = document.getElementById("nav-menu");
+
+            menuBtn.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+            });
+
+            // Navigation Links Behavior
+            document.getElementById("about-link").addEventListener("click", function () {
+                toggleSection("about-section");
+            });
+
+            document.getElementById("contact-link").addEventListener("click", function () {
+                toggleSection("contact-section");
+            });
+
+            document.getElementById("more-btn").addEventListener("click", function () {
+                toggleSection("more-content");
+            });
+
+            function toggleSection(sectionId) {
+                document.querySelectorAll(".hidden-section").forEach(section => {
+                    section.classList.remove("active");
+                });
+                document.getElementById(sectionId).classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>
