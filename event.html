@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - INFI SPORTS</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #6a0dad;
+            color: white;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .menu {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            width: 150px;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        .nav-menu li {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #6a0dad;
+            font-weight: bold;
+            display: block;
+        }
+
+        .nav-menu a:hover {
+            background: #eee;
+        }
+
+        .content {
+            padding: 50px 20px;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            color: #6a0dad;
+            margin-bottom: 20px;
+        }
+
+        .content p, .content ul {
+            font-size: 20px;
+            color: #333;
+            max-width: 900px;
+            margin: 20px auto;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .swiper-container {
+            width: 80%;
+            max-width: 600px;
+            height: 350px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: #6a0dad;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">INFI SPORTS</div>
+        <div class="menu" onclick="toggleMenu()">&#9776;</div>
+    </header>
+
+    <div class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </div>
+
+    <main class="content">
+        <h1>INAUGRAL EVENT</h1>
+        <p style="text-align: center; font-weight: bold;">"Play for Change: Compete. Win. Empower Tamil Nadu’s
+            Future!"</p>
+        
+        <div class="swiper-container" style="margin-bottom: 30px;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="7.png" alt="Team Image 1"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Team Image 2"></div>
+                <div class="swiper-slide"><img src="2.png" alt="Team Image 3"></div>
+                <div class="swiper-slide"><img src="3.png" alt="Team Image 4"></div>
+                <div class="swiper-slide"><img src="4.png" alt="Team Image 5"></div>
+                <div class="swiper-slide"><img src="5.png" alt="Team Image 6"></div>
+                <div class="swiper-slide"><img src="6.png" alt="Team Image 7"></div>
+            </div>
+        </div>
+        <!--<h2>Founded by College Students, Built for Competitors</h2>-->
+        <p>Our vision isn’t just about this tournament, it’s about what
+            comes next.<br>
+           After covering operational costs, every single rupee will be
+            funded directly to donate computers or digital learning kits
+            to underprivileged schools.<br> 
+           Even a small contribution can help bring a huge impact on
+            their lives</p>
+       <!--<h3>What We Offer:</h3>
+        <ul>
+            <li>Competitive Tournaments – Organized and fair play for all</li>
+            <li>Live Streaming – Quality video content shot for all gameplay</li>
+            <li>Family-Friendly Environment – With all essential amenities</li>
+            <li>Entry for all – Guaranteed quality game time for all participants</li>
+        </ul>
+        <h3>What We Organize:</h3>
+        <ul>
+            <li>3x3 Street Basketball Tournaments</li>
+            <li>5x5 & 7x7 Turf Football Leagues</li>
+            <li>Single & Doubles Corporate Badminton Leagues</li>
+            <li>Men’s, Women’s & Mixed Doubles Championships</li>
+            <li>Indoor & Outdoor Volleyball Leagues</li>
+            <li>Singles & Doubles Open Table Tennis Championships</li>
+        </ul>
+        <p>We plan to launch more domestic leagues on INFI SPORTS once market research confirms demand for each sport.</p>
+        <p>Our first-ever tournament is not just about winning a trophy; it’s about winning for a cause! Funds raised will be donated to improve IT infrastructure in Tamil Nadu's government schools.</p>
+        <p>Every participant is a winner, as you are a part of something bigger than just a game!</p>-->
+    </main>
+
+    <footer>
+        <p>&copy; 2025 INFI SPORTS. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+        delay: 5000, // Slide stays for 5 seconds
+        disableOnInteraction: false,
+    },
+    speed: 1500 // Transition duration is 1.5 seconds
+});
+
+
+        function toggleMenu() {
+            var menu = document.getElementById("navMenu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
