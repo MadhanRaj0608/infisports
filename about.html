@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - INFI SPORTS</title>
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <style>
-        /* General Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
@@ -19,19 +21,17 @@
             background-color: #f4f4f4;
         }
 
-        /* Header */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px;
-            background: #6a0dad;  /* Purple */
+            background: #6a0dad;
             color: white;
-            position: relative;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
         }
 
@@ -40,7 +40,6 @@
             cursor: pointer;
         }
 
-        /* Navigation Menu */
         .nav-menu {
             display: none;
             position: absolute;
@@ -73,66 +72,98 @@
             background: #eee;
         }
 
-        /* Main Content */
         .content {
-            padding: 40px;
+            padding: 50px 20px;
         }
 
         .content h1 {
-            font-size: 32px;
+            font-size: 36px;
             color: #6a0dad;
+            margin-bottom: 20px;
         }
 
-        .content p {
-            font-size: 18px;
-            color: #555;
-            max-width: 800px;
-            margin: 20px auto;
-            line-height: 1.6;
-        }
-
-        /* Subtext Styling */
-        .subtext {
+        .content p, .content ul {
             font-size: 20px;
-            font-weight: bold;
             color: #333;
+            max-width: 900px;
+            margin: 20px auto;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .swiper-container {
+            width: 80%;
+            max-width: 600px;
+            height: 350px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .contact-button {
+            margin-top: 30px;
+            background: #6a0dad;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        .contact-links {
+            display: none;
             margin-top: 20px;
-            max-width: 800px;
+            padding: 20px;
+            background: #666;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            width: 250px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.5;
         }
 
-        /* Carousel Styling */
-        .carousel-container {
-            width: 100%;
-            max-width: 500px;
-            margin: 40px auto;
-            overflow: hidden;
-            position: relative;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            justify-items: center;
         }
 
-        .carousel {
+        .contact-links a {
             display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
             width: 100%;
-            transition: transform 1s ease-in-out; /* Slower transition */
         }
 
-        .carousel img {
-            width: 100%;
-            max-height: 300px;
-            object-fit: contain;
-            flex: 0 0 100%;
+        .contact-links a:hover {
+            text-decoration: underline;
         }
 
-        /* Footer */
+        .contact-links a img {
+            width: 40px; 
+            height: 40px;
+            margin-right: 10px;
+        }
+
         footer {
             margin-top: 50px;
             padding: 20px;
             background: #6a0dad;
             color: white;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -143,66 +174,88 @@
         <div class="menu" onclick="toggleMenu()">&#9776;</div>
     </header>
 
-    <!-- Navigation Menu -->
     <div class="nav-menu" id="navMenu">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="event.html">Events</a></li>
         </ul>
     </div>
 
     <main class="content">
         <h1>About Us</h1>
-        <p>
-            We are INFI SPORTS, dedicated to bringing together sports enthusiasts from all backgrounds. 
-            Our mission is to organize thrilling tournaments and build a strong sporting community. 
-            Join us as we take sports to the next level!
-        </p>
-
-        <!-- Subtext Section -->
-        <p class="subtext">
-            We host exciting sports events in Chennai, bringing all kinds of athletes together 
-            for fierce competition and quality entertainment.
-        </p>
-
-        <!-- Image Carousel -->
-        <div class="carousel-container">
-            <div class="carousel" id="carousel">
-                <img src="7.png" alt="Sports Image 1">
-                <img src="1.png" alt="Sports Image 2">
-                <img src="2.png" alt="Sports Image 3">
-                <img src="3.png" alt="Sports Image 4">
-                <img src="4.png" alt="Sports Image 5">
-                <img src="5.png" alt="Sports Image 6">
-                <img src="6.png" alt="Sports Image 7">
+        <p>We are INFI SPORTS, dedicated to bringing together sports enthusiasts from all backgrounds...</p>
+        
+        <div class="swiper-container" style="margin-bottom: 30px;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="7.png" alt="Team Image 1"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Team Image 2"></div>
+                <div class="swiper-slide"><img src="2.png" alt="Team Image 3"></div>
+                <div class="swiper-slide"><img src="3.png" alt="Team Image 4"></div>
+                <div class="swiper-slide"><img src="4.png" alt="Team Image 5"></div>
+                <div class="swiper-slide"><img src="5.png" alt="Team Image 6"></div>
+                <div class="swiper-slide"><img src="6.png" alt="Team Image 7"></div>
             </div>
         </div>
+
+        <h2>Founded by College Students, Built for Competitors</h2>
+        <p>We organize and stream well-structured and action-packed sports tournaments, starting off in Chennai’s southern province.</p>
+        
+        <h3>What We Offer:</h3>
+        <ul>
+            <li>Competitive Tournaments – Organized and fair play for all</li>
+            <li>Live Streaming – Quality video content shot for all gameplay</li>
+            <li>Family-Friendly Environment – With all essential amenities</li>
+            <li>Entry for all – Guaranteed quality game time for all participants</li>
+        </ul>
+        <h3>What We Organize:</h3>
+        <ul>
+            <li>3x3 Street Basketball Tournaments</li>
+            <li>5x5 & 7x7 Turf Football Leagues</li>
+            <li>Single & Doubles Corporate Badminton Leagues</li>
+            <li>Men’s, Women’s & Mixed Doubles Championships</li>
+            <li>Indoor & Outdoor Volleyball Leagues</li>
+            <li>Singles & Doubles Open Table Tennis Championships</li>
+        </ul>
+        <p>We plan to launch more domestic leagues on INFI SPORTS once market research confirms demand for each sport.</p>
+        <p>Our first-ever tournament is not just about winning a trophy; it’s about winning for a cause! Funds raised will be donated to improve IT infrastructure in Tamil Nadu's government schools.</p>
+        <p>Every participant is a winner, as you are a part of something bigger than just a game!</p>
     </main>
+
+    <button class="contact-button" onclick="toggleContact()">CONTACT US!</button>
+    <div class="contact-links" id="contactLinks">
+        <div class="social-grid">
+            <a href="https://www.instagram.com/infi__sports?igsh=Y2JiNXJrank1bGYz"><img src="pngtree-instagram-icon-png-insta.png" alt="Instagram"></a>
+            <a href="#"><img src="whatsapp1.webp" alt="WhatsApp"></a>
+            <a href="#"><img src="gmail.webp" alt="Gmail"></a>
+            <a href="#"><img src="youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2025 INFI SPORTS. All Rights Reserved.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+       var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+        delay: 5000, // Slide stays for 5 seconds
+        disableOnInteraction: false,
+    },
+    speed: 1500 // Transition duration is 1.5 seconds
+});
+
         function toggleMenu() {
             var menu = document.getElementById("navMenu");
             menu.style.display = menu.style.display === "block" ? "none" : "block";
         }
 
-        let currentIndex = 0;
-        const images = document.querySelectorAll(".carousel img");
-        const totalImages = images.length;
-        const carousel = document.getElementById("carousel");
-
-        function showSlide(index) {
-            currentIndex = (index + totalImages) % totalImages;
-            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        function toggleContact() {
+            var contact = document.getElementById("contactLinks");
+            contact.style.display = contact.style.display === "block" ? "none" : "block";
         }
-
-        setInterval(() => {
-            showSlide(currentIndex + 1);
-        }, 3000); // Slower transitions every 3 seconds
     </script>
-
 </body>
 </html>
