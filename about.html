@@ -27,7 +27,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px;
-            background: #6a0dad;
+            background: linear-gradient(to right,#620475, #790092, #c62aad); /* Adjust colors */
             color: white;
         }
 
@@ -86,13 +86,19 @@
         }
 
         .content p, .content ul {
-            font-size: 20px;
-            color: #333;
-            max-width: 900px;
-            margin: 20px auto;
-            line-height: 1.8;
-            text-align: justify;
-        }
+    font-size: 20px;
+    color: #333;
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.8;
+    text-align: left; /* or center */
+    word-spacing: -1px;
+}
+.content p {
+    justify-content: center;
+}
+
+
 
         .swiper-container {
             width: 80%;
@@ -164,7 +170,7 @@
         footer {
             margin-top: 50px;
             padding: 20px;
-            background: #6a0dad;
+            background: linear-gradient(to right,#620475, #790092, #c62aad); /* Adjust colors */
             color: white;
             font-size: 18px;
         } header {
@@ -224,17 +230,21 @@
             </div>
         </div>
 
-        <h2 style=" font-family: 'Poppins', sans-serif;">Founded by College Students, Built for Competitors</h2>
-        <p style=" font-family: 'Poppins', sans-serif;">We organize and stream well-structured and action-packed sports tournaments, starting off in Chennai’s southern province.</p>
+        <h2 style="font-family: 'Poppins', sans-serif; font-size: 20px;">
+            Founded by College Students, Built for Competitors
+        </h2>
+                <p style=" font-family: 'Poppins', sans-serif;">We organize and stream well-structured and action-packed sports tournaments, starting off in Chennai’s southern province.</p>
         
-        <h3 style=" font-family: 'Poppins', sans-serif;">What We Offer:</h3>
-        <ul>
+                <h3 style="font-family: 'Poppins', sans-serif; margin-left: -800px;">
+                    What We Offer:
+                </h3>
+                        <ul>
             <li style=" font-family: 'Poppins', sans-serif;">Competitive Tournaments – Organized and fair play for all</li>
             <li style=" font-family: 'Poppins', sans-serif;">Live Streaming – Quality video content shot for all gameplay</li>
             <li style=" font-family: 'Poppins', sans-serif;">Family-Friendly Environment – With all essential amenities</li>
             <li style=" font-family: 'Poppins', sans-serif;">Entry for all – Guaranteed quality game time for all participants</li>
         </ul>
-        <h3 style=" font-family: 'Poppins', sans-serif;">What We Organize:</h3>
+        <h3 style=" font-family: 'Poppins', sans-serif; margin-left: -760px ;">What We Organize:</h3>
         <ul>
             <li style=" font-family: 'Poppins', sans-serif;">3x3 Street Basketball Tournaments</li>
             <li style=" font-family: 'Poppins', sans-serif;">5x5 & 7x7 Turf Football Leagues</li>
